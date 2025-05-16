@@ -70,7 +70,7 @@ void DeviceList::deviceListReceived(QNetworkReply *reply)
     }
     for( const QJsonValue &deviceValue : deviceList ) {
         QJsonObject device = deviceValue.toObject();
-        model.addSite(device);
+        model.addDevice(device);
     }
     ui->tableView->resizeColumnsToContents();
     if( page < totalPage ) {

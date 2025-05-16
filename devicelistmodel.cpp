@@ -135,7 +135,7 @@ void DeviceListModel::clear()
     endResetModel();
 }
 
-void DeviceListModel::addSite(QJsonObject jso)
+void DeviceListModel::addDevice(QJsonObject jso)
 {
     beginInsertRows(QModelIndex(), m_devices.count(), m_devices.count());
     Device device;
