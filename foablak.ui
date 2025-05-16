@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FoAblak</class>
+ <widget class="QMainWindow" name="FoAblak">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>653</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Token</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="appKeyLabel">
+        <property name="text">
+         <string>appKey</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="appKeyLineEdit"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="secretKeyLabel">
+        <property name="text">
+         <string>secretKey</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="secretKeyLineEdit">
+        <property name="echoMode">
+         <enum>QLineEdit::EchoMode::PasswordEchoOnEdit</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="token_get">
+      <property name="text">
+       <string>token/get</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QFormLayout" name="formLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="accessTokenLabel">
+        <property name="text">
+         <string>accessToken</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="accessTokenLineEdit">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="expireTimeLabel">
+        <property name="text">
+         <string>expireTime</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QDateTimeEdit" name="expireTimeDateTimeEdit">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="site_search">
+        <property name="text">
+         <string>site/search</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="device_list">
+        <property name="text">
+         <string>device/list</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>653</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menutoken">
+    <property name="title">
+     <string>token</string>
+    </property>
+    <addaction name="actionget"/>
+   </widget>
+   <widget class="QMenu" name="menusite">
+    <property name="title">
+     <string>site</string>
+    </property>
+    <addaction name="actionsearch"/>
+   </widget>
+   <widget class="QMenu" name="menudevice">
+    <property name="title">
+     <string>device</string>
+    </property>
+    <addaction name="actionlist"/>
+   </widget>
+   <widget class="QMenu" name="menumq">
+    <property name="title">
+     <string>mq</string>
+    </property>
+    <addaction name="actionmessages"/>
+   </widget>
+   <addaction name="menutoken"/>
+   <addaction name="menusite"/>
+   <addaction name="menudevice"/>
+   <addaction name="menumq"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionget">
+   <property name="text">
+    <string>get</string>
+   </property>
+  </action>
+  <action name="actionlist">
+   <property name="text">
+    <string>list</string>
+   </property>
+  </action>
+  <action name="actionsearch">
+   <property name="text">
+    <string>search</string>
+   </property>
+  </action>
+  <action name="actionmessages">
+   <property name="text">
+    <string>messages</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
