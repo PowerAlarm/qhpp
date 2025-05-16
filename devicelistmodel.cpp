@@ -134,3 +134,17 @@ void DeviceListModel::clear()
     m_devices.clear();
     endResetModel();
 }
+
+void DeviceListModel::addSite(QJsonObject jso)
+{
+    beginInsertRows(QModelIndex(), m_devices.count(), m_devices.count());
+    Device device;
+    device.id = jso["id"].toString();
+    device.deviceName = jso["deviceName"].toString();
+    device.deviceOnlineStatus = jso["deviceOnlineStatus"].toBool();
+    device.deviceSerial = jso["deviceSerial"].toString();
+    device.deviceVersion = jso["deviceVersion"].toString();
+    device.deviceType = jso["deviceType"].toString();
+    m_devices.append(device);
+    endInsertRows();
+}

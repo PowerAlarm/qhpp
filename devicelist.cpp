@@ -64,13 +64,13 @@ void DeviceList::deviceListReceived(QNetworkReply *reply)
     ui->progressBar->setMaximum(totalPage);
     int page = data.value("page").toInt();
     ui->progressBar->setValue(page);
-    const QJsonArray siteList = data["rows"].toArray();
+    const QJsonArray deviceList = data["rows"].toArray();
     if( jso["page"] == "1" ) {
         model.clear();
     }
-    for( const QJsonValue &siteValue : siteList ) {
-        QJsonObject site = siteValue.toObject();
-        //model.addrow(site);
+    for( const QJsonValue &deviceValue : deviceList ) {
+        QJsonObject device = deviceValue.toObject();
+        model.addSite(device);
     }
     ui->tableView->resizeColumnsToContents();
     if( page < totalPage ) {

@@ -74,6 +74,7 @@ public:
     bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex()) override;
 
     void clear();
+    void addSite(QJsonObject);
 private:
     QList<Device> m_devices; // List of devices
     QStringList m_headers; // Column headers
